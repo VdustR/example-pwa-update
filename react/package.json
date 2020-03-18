@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.9.7",
+    "emotion": "^10.0.27",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-scripts": "3.4.0",
+    "register-service-worker": "^1.7.0"
+  },
+  "devDependencies": {
+    "serve": "^11.3.0"
+  },
+  "scripts": {
+    "build": "node ../echoDateEnv.js REACT_APP_DATE > .env && react-scripts build && serve -s build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
