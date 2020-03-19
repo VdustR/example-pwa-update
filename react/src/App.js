@@ -17,7 +17,7 @@ const App = () => {
   const [update, setUpdate] = useState(null);
   const [refreshing, setRefreshing] = useState(false);
   useEffect(() => {
-    register('/service-worker.js', {
+    register(`${process.env.PUBLIC_URL}/service-worker.js`, {
       registrationOptions: { scope: './' },
       updated(registration) {
         setUpdate(() => () => {

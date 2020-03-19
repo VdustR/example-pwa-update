@@ -22,7 +22,7 @@ export default {
   }),
 
   mounted() {
-    register('/service-worker.js', {
+    register(`${process.env.BASE_URL}service-worker.js`, {
       registrationOptions: { scope: './' },
       updated: registration => {
         this.update = () => {
